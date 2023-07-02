@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="stato-3" content="page from list">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Списки</title>
+    <link rel="stylesheet" href="style/2 style.css">
+</head>
+<body>
+    <header>
+        <h1 id="top">На этой странице представлена работа с списками</h1>
+    </header>
+    <fieldset>
+        <legend>Упорядоченные списки</legend>
+        <h3 class="sample">&lt;ol></h3>
+        <p>
+            Упорядоченные списки создаются при помощи элемента <code>&lt;ol></code>
+        </p>
+        <h3 class="sample">&lt;li></h3>
+        <p>
+            Каждый элемент списка помещается между тегами <code>&lt;li></code>
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <ol>
+                <li>В этих списках используеться нумерация</li>
+                <li>Браузер автоматически расставляет нумерацию</li>
+                <li>Обычно в спиках используется атрибут <code>&lt;type></code> который применяется в <i>CSS</i></li>
+                <li>В <i>CSS</i> можно изменять размер, тип нумерации или вовсе уберать нумерацию и обозначения в списках</li>
+                <li>Лучше всего использовать язык <i>SCSS</i> т.к. в нём проще редактировать большие объёмы информации</li>
+            </ol>
+        </div>
+    </fieldset>
+    <fieldset class="right">
+        <legend>Неупорядоченные списки</legend>
+        <h3 class="sample">&lt;ul></h3>
+        <p>
+            Неупорядоченные списки создаются при помощи тега <code>&lt;ul></code>
+        </p>
+        <h3 class="sample">&lt;li></h3>
+        <p>
+            Каждый элемент списка помещается между тегами <code>&lt;li></code>
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <ul>
+                <li>Это неупорядоченные списки</li>
+                <li>Их можно использовать в качестве простого перечисления функций или ведения списка дел</li>
+                <li>Как и список созданный при помощи атрибута <code>&lt;li></code> этот список можно редактировать в <i>CSS</i></li>
+            </ul>
+        </div>
+    </fieldset>
+    <fieldset class="right">
+        <legend>Список внутри списка</legend>
+        <p>
+            Попытка создания спиcка внутри другого списка. Тут я попытался создать неупорядочееный список внутри упорядоченного.
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <ol>
+                <li>В этом спике ничего нет</li>
+                <li>В этом списке должен быть вложенный список</li>
+                    <ul>
+                        <li>При помощи добавления *2 можно сразу создавать несколько строк</li>
+                        <li>Этот список будет неупорядоченным</li>
+                    </ul>
+                <li>В этом списке будет список 3го уровня</li>
+                    <ul>
+                        <li>Lorem ipsum dolor sit amet consectetur adipisicing.</li>
+                        <ol>
+                            <li>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum atque sequi aliquam ad, voluptates delectus cupiditate. At minus beatae dolore.</li>
+                        </ol>
+                        <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Asperiores, porro temporibus.</li>
+                    </ul>
+                <li>А в этом будут ваши Клауды</li>
+            </ol>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Списки определений</legend>
+        <h3 class="sample">&lt;dl></h3>
+        <p>
+            Список определений создаётся с помощью тега <code>&lt;dl></code> и, как правило содержит набор понятий и их определений. <br>
+            Внутри элемента <code>&lt;dl></code> зачастую можно увидеть пары элементов <code>&lt;dt></code> и <code>&lt;dd></code>
+        </p>
+        <ul>
+            <li><b>dt</b> - используется для обозначения понятия(термин)</li>
+            <li><b>dd</b> - используется для определения понятия</li>
+        </ul>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+                <dl>
+                    <dt>Биорезонанс</dt>
+                    <dd>
+                        Это концепция, основанная на предположении о том, что каждый орган или система организма имеет свою собственную уникальную энергетическую частоту. С помощью специальных устройств и техник, биорезонанс используется для измерения и коррекции этих энергетических частот с целью восстановления баланса и благополучия организма.
+                    </dd>
+                    <dt>Мнемоплатформа</dt>
+                    <dd>
+                        Компьютерный програмный инструмент, предназначенный для систематизации, хранения и воспроизведения информации, использующийся в целях обучения и запоминания.
+                    </dd>
+                </dl>
+        </div>
+    </fieldset>
+    <p><a href="#top"><img src="images/кнопка_наверх.png" alt="" class="button_top"></a></p>
+    <footer>
+        <a href="2 Работа с текстом.html" class="link">Предыдущая часть</a>
+        <a href="1 Работа с html.html" class="link">На главную</a>
+        <a href="4 Ссылки.html" class="link">Следующая страница</a>
+    </footer>
+</body>
+</html>
