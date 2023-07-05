@@ -1,0 +1,41 @@
+body {
+    background-image: url("../../images/снежный_фон.png");
+}
+h1 {
+    text-align: center;
+    color: #42eb8bf6;
+    border: 2px solid #42eb8bf6;
+    background-color: #030303c6;
+    margin: 0px 350px 5px 350px;
+}
+legend {
+    color: #040404;
+    background-color: #42eb8bf6;
+    border-radius: 12px;
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
+fieldset {
+    width: 400px;
+    border: 2px groove #42eb8bf6;;
+    border-radius: 7px;
+    padding: 20px;
+    margin: 15px auto;
+    background-color: #c1c1c1;
+}
+footer {
+    padding: 10px 0px 0px 0px;
+}
+.link {
+    margin: 20px 100px 10px 660px;
+    border: 2px solid #42eb8bf6;
+    background-color: #030303c6;
+    padding: 15px;
+    border-radius: 85%;
+}
+a {
+    color: #42eb8bf6;   
+}
+a:active {
+    color: rgb(233, 226, 35);
+}
