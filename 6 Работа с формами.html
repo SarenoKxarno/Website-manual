@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="stato-6" content="forms">
+    <meta name="progect 2.5" content="width=device-width, initial-scale=1.0">
+    <title>Формы</title>
+    <link rel="stylesheet" href="style/4 style.css">
+</head>
+<body>
+    <header>
+        <h1 id="top">На этой странице представлена работа с различными формами</h1>
+    </header>
+    <fieldset>
+        <legend>Структура формы</legend>
+        <h3 class="sample">&lt;form></h3>
+        <p>
+            Все формы помещены в тег <code>&lt;form></code> кроме этого всегда должен быть указан атрибут <code>&lt;action</code>.
+        </p>
+        <h3 class="sample">action</h3>
+        <p>
+            Атрибут <code>action</code> содержит в себе значение URL-адрес страницы получателя введённых данных при отправке формы на сервер.
+        </p>
+        <h3 class="sample">method</h3>
+        <p>
+            Формы можно отправлять при помощи одного из двух методов <code>get</code> или <code>post</code>. Выглядеть это будет примерно так: <code>"method="get"</code> <br>
+            Метод <code>get</code> создан для:
+        </p>
+            <ul>
+                <li>Коротких форм(например поисковый запрос)</li>
+                <li>При простом получении данных с Web-сервера(без отправки сведений в базу данных)</li>
+            </ul>
+            Метод <code>post</code> подойдёт если форма:
+            <ul>
+                <li>Позволяет пользователям загружать файлы на сайт</li>
+                <li>Очень длинные</li>
+                <li>Содержат конфиденциальные данные</li>
+                <li>Добавляет или удаляет сведения или удаляет их из базы данных</li>
+            </ul>
+            Если атрибут <code>method</code> не указан то форма будет отправлена на сервер с помощью метода <code>get</code>
+        
+    </fieldset>
+    <fieldset class="right">
+        <legend>Ввод текста</legend>
+        <h3 class="sample">maxlength</h3>
+        <p>
+            Атрибут <code>maxlength</code> можно использовать для ограничения количества символов, которое можно ввести пользователю в данном поле.
+        </p>
+        <h3 class="sample">id</h3>
+        <p>
+            <code>id</code> используется для различения формы и других элементов разметки страницы.
+        </p>
+        <h3 class="sample">size</h3>
+        <p>
+            <b class="red">Важно!</b> Не использовать атрибут <code>size</code> ранее его могли использовать для управления шириной поля ввода данных. В настоящий момент, размер поля редактируеться исключительно в файлах формата <i>CSS</i>.
+        </p>
+        <h3 class="sample">&lt;input></h3>
+        <p>
+            Элемент <code>&lt;input></code> используется для создания компонентов формы нескольких типов. Значение атрибута <code>type</code> указывает этот тип.
+        </p>
+        <h3 class="sample">type="text"</h3>
+        <p>
+            Когда артибут <code>type</code> указывает значение <code>text</code> это значит что будет созданно однострочное поле ввода текста.
+        </p>
+        <h3 class="sample">name</h3>
+        <p>
+            При заполненении и отправке формы с данными, сервер должен знать, какие сведения относяться к какому элементу формы. Достигается это при помощи атрибута <code>name</code> который присваевает формам класс, к которым после происходит обращение. 
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <p>
+                Пример того, как должен выглядеть код: <code class="cood">&lt;input type="text" name="username" size="15" maxlength="30"></code> <br>
+                <form action="">
+                    <p>
+                        Имя пользователя:
+                        <input type="text" name="username" size="15" maxlength="30">
+                    </p>
+                </form>
+            </p>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Ввод пороля</legend>
+        <h3 class="sample">type="password"</h3>
+        <p>
+            Использовать атрибут <code>type-"password"</code> можно для создания специальных поле для ввода важных данных. Т.к. использование этого атрибута, полностью шифрует вводимый в форму текст.
+        </p>
+        <h3 class="sample">name</h3>
+        <p>
+            Атрибут <code>name</code> устанавливает имя поля ввода пороля, отправляемого на сервер вместе с поролем, введённым пользователем.
+        </p>
+        <h3 class="sample">size и maxlength</h3>
+        <p>
+            Атрибуты <code>size</code> и <code>maxlength</code> также можно использовать и в отношении форм с поролем. Но, как и ранее, работы с оформлением форм и сайта в целом, проводить лучше в <i>CSS</i>.
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <p>
+                Пример того, как должен выглядеть код: <code class="cood">&lt;input type="text" name="password" size="15" maxlength="30"></code>
+            </p>
+            <form action="">
+                <p>
+                    Имя пользователя:
+                    <input type="text" name="username" size="15" maxlength="30">
+                </p>
+                <p>
+                    Пороль:
+                    <input type="text" name="password" size="15" maxlength="30">
+                </p>
+            </form>
+        </div>
+    </fieldset>
+    <fieldset class="right">
+        <legend>Текстовая область</legend>
+        <h3 class="sample">&lt;textarea></h3>
+        <p>
+            Элемент <code>&lt;textarea></code> используется для создания многострочных облостей ввода текста.
+        </p>
+        <p>
+            Работы над визуальным составляющим сайта проводяться в файлах типа <i>CSS</i>, но на старых сайтах можно увидеть такие атрибуты как <code>cols</code> и <code>rows</code>. <br>
+            <code>cols</code> устанавливает ширину текстовой области, которая измеряется в количестве символов, а <code>rows</code> задаёт высоту поля в строках.
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <form action="">
+                <p>Какое ваше самое любимое блюдо?</p>
+                <textarea name="comment" id="" cols="25" rows="5">Кратко про него расскажите...</textarea>
+            </form>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Переключатели</legend>
+        <p>
+            Атрибут <code>type="radio"</code> позволяет посетителям сайта, выбрать только один вариант из предложенных.
+        </p>
+        <p>
+            Атрибут <code>name</code> отправляется серверу вместе с значением выбранного переключателя. Если ответ на вопрос подразумевает выбор одного из нескольких вариантов, все переключатели формирующие список ответов должны иметь одинаковое значение атрибута <code>name</code>.
+        </p>
+        <p>
+            Атрибут <code>checked</code> указывает на то, какой из предлагаемых вариантов должен быть выбран по умолчанию при загрузки страницы(если это необходимо). Атрибут принемает единственное значение - <code>checked</code>. Данный атрибут должен быть установлен только у одного переключателя из группы.
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <form action="">
+                <p>
+                    Выберите наиболее предпочтительную страну:
+                </p>
+                <br>
+                <input type="radio" name="country" value="Barbados"> Барбадос
+                <br>
+                <input type="radio" name="country" value="Greece"> Греция
+                <br>
+                <input type="radio" name="country" value="Costa Rica"> Коста Рика
+            </form>
+        </div>
+    </fieldset>
+    <fieldset class="right">
+        <legend>Флажки</legend>
+        <h3 class="sample">type="checkbox"</h3>
+        <p>
+            Атрибут <code>type="checkbox"</code> позволяет посетителям сайта, выбрать из нескольких вариа ответа, а также отменять выбор. <br>
+        </p>
+        <h3 class="sample">name</h3>
+        <p>
+            Атрибут <code>name</code> отправляеться серверу вместе с значением выбранных посетителем вариантов ответа. В данном случае значение атрибута <code>name</code> должно быть одинаковым для всех флажков группы. <br>
+        </p>
+        <h3 class="sample">value</h3>
+        <p>
+            Атрибут <code>value</code> указывает значение отправляемое серверу при установке данного флажка.
+        </p>
+        <h3 class="sample">checked</h3>
+        <p>
+            Атриубт <code>checked</code> указывает что данный флажок должен быть установлен по умолчанию при загрузке страницы. Атрибут принемает единственное значение - <code>checked</code>.
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <form action="">
+                <p>
+                    Выберете гачи-игру в которую в играете:
+                </p>
+                <br>
+                <input type="checkbox" name="mobile game" value="DBLedgens"> Dragon Ball Ledgens
+                <br>
+                <input type="checkbox" name="mobile game" value="Arknight"> Аркнайт
+                <br>
+                <input type="checkbox" name="mobile game" value="Azur Lane"> Азурлэейн
+                <br>
+                <input type="checkbox" name="mobile game" value="Fate GO" checked> Fate
+                <br>
+                <input type="checkbox" name="mobile game" value="Genhin Impact"> Геншин
+            </form>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Раскрывающийся список</legend>
+        <h3 class="sample">&lt;select></h3>
+        <p>
+            Для создания раскрывающегося списка, используют элемент <code>&lt;select></code> он может содержать два и более элементов <code>&lt;option></code>.
+        </p>
+        <h3 class="sample">name</h3>
+        <p>
+            Атрибут <code>name</code> опрежеляет имя элемента формы, отправляемое на сервер вместе с выбранным значением.
+        </p>
+        <h3 class="sample">&lt;option></h3>
+        <p>
+            Элемент <code>&lt;option></code> используеться для указания вариантов ответа, которые может выбрать посетитель сайта.
+        </p>
+        <h3 class="sample">value</h3>
+        <p>
+            Атрибут <code>value</code> в элементе <code>&lt;option></code> используеться для установки значения отправляемого на сервер вместе с именем выбранного элемента. <br>
+        </p>
+        <h3 class="sample">selected</h3>
+        <p>
+            Атрибут <code>selected</code> устанавливает вариант ответа, который должен быть показан по умолчанию при загрузке страницы. Если этот элемент отсутствует, то будет показан первый вариант ответа.
+            Функционал списка аналогичен переключателям(выбран может быть только один вариант). <br>
+            Однако у каждого элемента есть своё преймущество:
+            <ul>
+                <li>Если необходимо чтобы посетитель сайта видел все варианты ответа сразу, то использовать лучше переключатели.</li>
+                <li>Если список варианто вдостаточно длинный, то лучше подойдёт раскрывающийся список.</li>
+            </ul>
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <form action="">
+                <p>Какой язык программирования вам кажеться наиболее интересным?</p>
+                <select name="Programming languages">
+                    <option value="html">HTML</option>
+                    <option value="php">php</option>
+                    <option value="python" selected>Питон</option>
+                </select>
+            </form>
+        </div>
+    </fieldset>
+    <fieldset class="right">
+        <legend>Список множественного выбора</legend>
+        <h3 class="sample">size</h3>
+        <p>
+            Добавив в элемент <code>&lt;select</code> атрибут <code>size</code> можно превратить раскрывающийся список в поле отображающее сразу несколько вариантов выбора. Значением этого атрибута должно быть количество отображаемых элементов за раз. К сожалению не все бразеры корректноработают с этим атрибутом, поэтому нужно тщательно тестировать сайт на работапригодность. Особенно это касается браузеров Firefox и Safari на компьютерах с операционной системой OS X.
+        </p>
+        <h3 class="sample">multiple</h3>
+        <p>
+            Добавив атрибут <code>multiple</code> со значением <code>multiple</code> можно позволить посетителям сайта выбрать сразу несколько вариантов ответа.
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <form action="">
+                <p>
+                    Выберете один или несколько жанров аниме, которые вам нравяться.
+                </p>
+                <select name="Anime genre" size="3" multiple>
+                    <option value="Detective">Детектив</option>
+                    <option value="Mechs">Роботы</option>
+                    <option value="Issecai">Попаданцы</option>
+                    <option value="Echi" selected>Этти</option>
+                </select>
+            </form>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Загрузка файлов на сервер</legend>
+        <h3 class="sample">&lt;input></h3>
+        <p>
+            Если вы хотите позволить пользователям вашего сайта загружать на него какие-либо файлы, то вам понадобиться атрибут <code>&lt;input></code>.
+        </p>
+        <h3 class="sample">multiple</h3>
+        <p>
+            Значение атрибута <code>type="file"</code> создаст поле, для размещения фалйов пользователем. Важно помнить, что при создании этой формы <b class="red">ВСЕГДА!</b> нужно использовать метод <code>post</code> т.к. передача файлов через метод <code>get</code> невозможна.
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <form action="" method="post">
+                <p>Загрузите файл вашей любимой книги</p>
+                <input type="file" name="book"> <br>
+                <input type="submit" value="Загрузить файл">
+            </form>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Кнопка подтверждения</legend>
+        <h3 class="sample">type="submit"</h3>
+        <p>
+            Значение элемента <code>type="submit"</code> используеться для отправки формы с данными на сервер.
+        </p>
+        <h3 class="sample">name</h3>
+        <p>
+            Данному элементу может быть присвоен атрибут <code>name</code> но его использование не обязательно.
+        </p>
+        <h3 class="sample">value</h3>
+        <p>
+            Атрибут <code>value</code> используется для указания текста на кнопке. Устанавливать текст записи нужно самостоятельно т.к. в некоторых браузерах по умолчанию пишется отправить. Чтобы самостоятельно настроить дизайн кнопки, лучше всего использовать <i>"CSS"</i>.
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <form action="">
+                <p>Подпишись на канал и поставь лайк</p>
+                <input type="text" name="email">
+                <input type="submit" name="subscrube" value="Подписка">
+            </form>
+        </div>
+    </fieldset>
+    <fieldset class="right">
+        <legend>Графическая кнопка</legend>
+        <h3 class="sample">type="image"</h3>
+        <p>
+            Если необходимо испольщовать свой дизайн в качестве кнопки, то стоит использовать элемент <code>type="image"</code>. <br>
+            Атрибуты <code>src</code>, <code>width</code>, <code>height</code> и <code>alt</code> будут работать также как и с элементом <code>img</code>
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <form action="">
+                <p>
+                    Подпишись чтобы не пропустить новые видео!
+                </p>
+                <input type="text" name="email">
+                <input type="image" src="images/subscrube.png" width="100" height="25">
+            </form>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Кнопки и скрытые элементы формы</legend>
+        <h3 class="sample">&lt;button></h3>
+        <p>
+            Элемент <code>&lt;button></code> был добавлен чтобы позволить разработчикам получить больше контроля над внешним видом кнопок, а также сделать так чтобы внутри кнопки были и другие элементы.
+        </p>
+        <h3 class="sample">type="hidden"</h3>
+        <p>
+            <code>type="hidden"</code> это скрытое поле информации, куда дизайнер или разработчик может поместить данные, которые не должен увидеть пользователь.
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <form action="">
+                <button>
+                    <img src="images/subscrube.png" alt="Подписка" width="100" height="25">
+                    Не забудь!
+                </button>
+                <input type="hidden" name="Кладмен" value="Секретное место">
+            </form>
+        </div>
+    </fieldset>
+    <fieldset class="right">
+        <legend>Метки элементов формы</legend>
+        <h3 class="sample">&lt;label></h3>
+        <p>
+            Элемент <code>&lt;label></code> создан для упрощения пользования сайтом людьми с проблема зрения. Использовать этот элемент можно 2мя способами. Окружить им и метку и сам элемент формы, либо указать отдельно от элемента формы, но при этом задействовать атрибут <code>for</code>
+        </p>
+        <h3 class="sample">for</h3>
+        <p>
+            Атрибут <code>for</code> устанавливает связь между <code>label</code> и элементами формы. Для отличия данного элемента разметки от всего остального кода, используеться элемент <code>id</code>. Для каждого элемента на странице, значение этого атрибута должно быть уникальным.
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <label for=""> Какой вы предмочитаете образ жизни?
+                <br>
+                <input id="day" type="checkbox" name="way of life" value="d">
+                <label for="day">Дневной</label>
+                <br>
+                <input id="night" type="checkbox" name="way of life" value="n">
+                <label for="night">Ночной</label>
+                <br>
+                <input id="adjacent" type="checkbox" name="way of life" value="a">
+                <label for="adjacent">Смежный</label>
+            </label>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Группировка элементов формы</legend>
+        <p>
+            Злементы формы связанные по смыслу, можно сгруппировать в <code>fieldset</code> это бывает особенно полезно при создании длинных форм. <br>
+            Большинство брузеров отобразят <code>fieldset</code> в виде рамки вокруг элементов формы. Внешний вид рамки модет быть изменён с помощью <i>CSS</i>. <br>
+            Эдемент <code>legend</code> содержащий надпись обозначения группы элементов формы, как правило, помещают сразу после открывающего тега элемента <code>fieldset</code>. 
+        </p>
+    </fieldset>
+    <fieldset>
+        <legend>Валидация данных формы</legend>
+        <p>
+            Существуют поля с обязательным вводом данных. Если эти поля не заполнены, то происходит реакция называемая валидацией данных форм. <br>
+            В старых версиях <u>HTML</u> использовали сценарии написанные на языке <i>JavaScreept</i> но в <u>HTML5</u> появилась собственная технология валидации. <br>
+            Примером встренной системы проверки может быть атрибут <code>required</code>.
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <form action="" method="get">
+                <label for="">Имя получателя:</label>
+                <input type="text" name="sender name" required><br>
+                <label for="">Письмо:</label>
+                <input type="text" name="email" required><br>
+                <input type="submit" value="Отправить сообщение">
+            </form>
+        </div>
+    </fieldset>
+    <fieldset class="right">
+        <legend>Ввод даты</legend>
+        <p>
+            Для запроса ввода даты, можно исппользовать элемент <code>type="date"</code> таким образом, в браузерах потдерживающих <u>HTML5</u> будет выведено поле для ввода даты. <br>
+            Внешний вид элемента может меняться в зависимости от используемого браузера.
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <form action="" method="post">
+                <label for="calendar">Дата вашего повышения</label>
+                <input type="date" name="calendar">
+                <input type="submit" value="Принять">
+            </form>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>URL-адрес и адрес ЭЛ. почты</legend>
+        <h3 class="sample">type="email"</h3>
+        <p>
+            Для запрсоа адреса электронной почты, можно воспользоваться специализированным полем ввола <code>type="email"</code>.
+        </p>
+        <h3 class="sample">type="url"</h3>
+        <p>
+            Поле ввода URL-адресов модет быть использована, для запроса адреса страницы в интернете <code>type="url"</code>.
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <form action="" method="post">
+                <p>Проверка работы элемента отвечающего за ввод электронной почты.</p>
+                <input type="email" name="email">
+                <input type="submit" value="Отправить адрес ЭП">
+            </form>
+            <br>
+            <form action="" method="post">
+                <p>Проверка работоспособности элемента, отвечающего за ввод URL-адресов</p>
+                <input type="url" name="sait">
+                <input type="submit" value="Отправить ссылку">
+            </form>
+        </div>
+    </fieldset>
+    <fieldset class="center">
+        <legend>Поле ввода поискового запроса</legend>
+        <h3 class="sample">type="search"</h3>
+        <p>
+            Для создания поля поискового запроса необходимо использовать элемент <code>type="search"</code> страые версии браузеров, могут отобразить это, как простое текстовое поле.
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <form action="">
+                <p>Поле поискового запроса:</p>
+                <input type="search" name="poisk">
+                <input type="submit" value="Начать поиск">
+            </form>
+        </div>
+        <h3 class="sample">placeholder</h3>
+        <p>
+            С любым полем ввода можно использовать атрибут <code>placeholder</code> значение которого явлеться текст, отображаемый в поле, до того как в него введёт текст пользователь. <br>
+            Страые версии браузеров могут игнорировать этот атрибут.
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <form action="">
+                <p>Поле поискового запроса:</p>
+                <input type="search" name="poisk" placeholder="Уроки английского языка">
+                <input type="submit" value="Поиск">
+            </form>
+        </div>
+    </fieldset>
+    <p><a href="#top"><img src="images/кнопка_наверх.png" alt="" class="button_top"></a></p>
+    <p><a href="Сайт с оформлением подписки.html" id="subscription">Пример сайта с подпиской</a></p>
+    <a href="5 Таблицы.html" class="link">Предыдущая часть</a>
+    <a href="1 Работа с html.html" class="link">На главную</a>
+    <a href="7 Видео и аудиофайлы.html" class="link">Следующая страница</a>
+</body>
+</html>
