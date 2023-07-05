@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="stato-5" content="info table">
+    <meta name="progect 2.5" content="width=device-width, initial-scale=1.0">
+    <title>Таблицы</title>
+    <link rel="stylesheet" href="style/4 style.css">
+</head>
+<body>
+    <header>
+        <h1 id="top">На этой странице представлена работа с таблицами</h1>
+    </header>
+    <fieldset>
+        <legend>Базовая структура таблицы</legend>
+        <h3 class="sample">&lt;table></h3>
+        <p>
+            Для создания таблиц используеться тег <code>&lt;table></code> записи в таблице осущетсвляются построчно.
+        </p>
+        <h3 class="sample">&lt;tr></h3>
+        <p>
+            Открывающий тег <code>&lt;tr></code> Обозначает начало строки таблицы. После закрытия тега, строка в таблице заканчивается.
+        </p>
+        <h3 class="sample">&lt;td></h3>
+        <p>
+            Каждая ячейка таблицы создаётся при помощи тега <code>&lt;td></code> внутри которого пишится нужная информация. Некоторые браузеры могут оформлять таблици.<br>
+            Но рекомендуеться делать это самостоятельно в <i>CSS</i> или <i>SCSS</i>
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <table>
+                <p>Макро игра</p>
+                <tr>
+                    <td>1 Тибо</td>
+                    <td>2 SarenKxarn</td>
+                    <td>3 Влад</td>
+                </tr>
+            </table>
+            <table>
+                <p>Микро игра</p>
+                <tr>
+                    <td>1 Limon</td>
+                    <td>2 Тибо</td>
+                    <td>3 SarenKxarn</td>
+                </tr>
+            </table>
+        </div>
+    </fieldset>
+    <fieldset class="right">
+        <legend>Заголовки таблиц</legend>
+        <h3 class="sample">&lt;th></h3>
+        <p>
+            Можно использовать элемент <code>&lt;th></code> который используется для создания заголовок стобца или строчки. Даже если ячейка не содержит данных, она должна представать пустым элементом. <br> 
+            Ещё можно использовать атрибут <code>&lt;scope></code> для обозначения того, является этот элемент строчкой или столбцом.<br>
+            Для этого используют 2 значения <code>&lt;row></code> если это строчка и <code>&lt;col></code> если это столбец.
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <table>
+                <tr>
+                    <th scope="col"></th>
+                    <th scope="col">Роли</th>
+                    <th scope="col">Пул</th>
+                </tr>
+                <tr>
+                    <th scope="row">SarenKxarn: </th>
+                    <td>4</td>
+                    <td>15+</td>
+                </tr>
+                <tr>
+                    <th scope="row">Limon: </th>
+                    <td>2</td>
+                    <td>5+</td>
+                </tr>
+            </table>
+        </div>
+    </fieldset>
+    <fieldset class="right">
+        <legend>Объединение столбцов</legend>
+        <h3 class="sample">&lt;colspan></h3>
+        <p>
+            Используя атрибут <code>&lt;colspan></code> можно задать количество столбцов, которое занимает указанная ячейка. <br>
+            Этот атибут работает в паре с элементами <code>&lt;td></code> и <code>&lt;th></code>
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <table>
+                <tr>
+                    <th></th>
+                    <th scope="col">Голда</th>
+                    <th scope="col">Мид</th>
+                    <th scope="col">Экспа</th>
+                </tr>
+                <tr>
+                    <th scope="row">Люнокс</th>
+                    <td colspan="2" style="text-align: center; vertical-align: middle;">Стоит</td>
+                    <td> Нестоит</td>
+                </tr>
+                <tr>
+                    <th scope="row">Госсен</th>
+                    <td>Нестоит</td>
+                    <td colspan="2" style="text-align: center; vertical-align: middle;">Стоит</td>
+                </tr>
+            </table>
+            <p>
+                А применяя атрибут <code>&lt;rowspan></code> можно сделать так, чтобы 1 ячейка занимала сразу 2 столбца 
+            </p>
+            <table>
+                <tr>
+                    <th></th>
+                    <th scope="col">Зарядка</th>
+                    <th scope="col">Пробежка</th>
+                </tr>
+                <tr>
+                    <th scope="row">Понедельник</th>
+                    <td rowspan="2">Будет</td>
+                    <td>Не будет</td>
+                </tr>
+                <tr>
+                    <th scope="row">Вторник</th>
+                    <td>Будет</td>
+                </tr>
+            </table>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Длинные таблицы</legend>
+        <p>
+            У таблиц должно быть своё, особенное, оформление. Лучше всего его писать непосредственно в <i>"CSS"</i> но если такой возможности нет, то нужно использовать следующие команды.<br>
+            <code>&lt;thead></code> - это тег в котором должен быть заголовки таблицы.<br>
+            <code>&lt;tbody></code> - содержит в себе само тело таблицы.<br>
+            <code>&lt;tfoot></code> - последняя, завершающая строка таблицы. <br>
+            Некоторые браузеры могут не отображать вышеупомянутые теги, поэтому вебдизайнеры работают с ними через <i>"CSS"</i> но использовать их стоит для упрощения загрузки браузером очень большой таблицы.
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <table>
+                <thead>
+                    <tr>
+                        <th scope="col">Дата</th>
+                        <th scope="col">Часы работы</th>
+                        <th scope="col">Прибыль</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1-е</td>
+                        <td>5 часов</td>
+                        <td>2000</td>
+                    </tr>
+                    <tr>
+                        <td>2-е</td>
+                        <td>3,5 часов</td>
+                        <td>1700</td>
+                    </tr>
+                    <tr>
+                        <td>3-е</td>
+                        <td>2 часа</td>
+                        <td>500</td>
+                    </tr>
+                    <tr>
+                        <td>4-е</td>
+                        <td>2 часа</td>
+                        <td>1000</td>
+                    </tr>
+                    <tr>
+                        <td>5-е</td>
+                        <td>7 часов</td>
+                        <td>3500</td>
+                    </tr>
+                    <tr>
+                        <td>6-е</td>
+                        <td>4 часа</td>
+                        <td>6000</td>
+                    </tr>
+                    <tr>
+                        <td>7-е</td>
+                        <td>2.5 часа</td>
+                        <td>750</td>
+                    </tr>
+                    <tr>
+                        <td>8-е</td>
+                        <td>5 часов</td>
+                        <td>2000</td>
+                    </tr>
+                    <tr>
+                        <td>9-е</td>
+                        <td>4 часа</td>
+                        <td>2000</td>
+                    </tr>
+                    <tr>
+                        <td>10-е</td>
+                        <td>3 часа</td>
+                        <td>1500</td>
+                    </tr>
+                    <tr>
+                        <td>11-е</td>
+                        <td>5 часов</td>
+                        <td>3200</td>
+                    </tr>
+                    <tr>
+                        <td>12-е</td>
+                        <td>1 час</td>
+                        <td>700</td>
+                    </tr>
+                    <tr>
+                        <td>13-е</td>
+                        <td>4 часа</td>
+                        <td>1350</td>
+                    </tr>
+                    <tr>
+                        <td>14-е</td>
+                        <td>5 часов</td>
+                        <td>3000</td>
+                    </tr>
+                    <tr>
+                        <td>15-е</td>
+                        <td>5 часов</td>
+                        <td>2000</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <th></th>
+                    <td>58 часов</td>
+                    <td>31 200</td>
+                </tfoot>
+            </table>
+        </div>
+    </fieldset>
+    <fieldset class="center">
+        <legend>Старый код для редактирования таблиц</legend>
+        <p>
+            Ранее, до того как все визуальные работы начали проводить в <i>CSS</i> для редактирования ширины таблицы использовали атрибут <code>&lt;width></code> он устанавливал ширигу, которой следовали все остальные элементы строки.<br>
+            Был и атрибут <code>&lt;cellspacing></code> задающий величину промежутками между ячейками таблицы.<br>
+            Атрибут <code>&lt;border></code> используеться с элементами <code>&lt;table></code> и <code>&lt;th></code> для установки ширины границы в пикселях(создания рамки).<br>
+            Атрибут <code>&lt;bgcolot></code> используеться для установки цвета всей таблицы.<br>
+        </p>
+    </fieldset>
+    <p><a href="#top"><img src="images/кнопка_наверх.png" alt="" class="button_top"></a></p>
+    <footer>
+        <a href="4 Ссылки.html" class="link">Предыдущая часть</a>
+        <a href="1 Работа с html.html" class="link">На главную</a>
+        <a href="6 Работа с формами.html" class="link">Следующая страница</a>
+    </footer>
+</body>
+</html>
