@@ -124,3 +124,12 @@ td {
     padding: 15px;
     border-radius: 85%;
 }
+#pseud-cen {
+    margin: 25px 380px;
+}
+video {
+    margin: 5px 0px 5px 140px;
+}
+audio {
+    width: 750px;
+}
