@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="stato-7" content="video and audio">
+    <meta name="project 2.5" content="width=device-width, initial-scale=1.0">
+    <title>Видео и аудиофайлы</title>
+    <link rel="stylesheet" href="style/4 style.css">
+</head>
+<body>
+    <header>
+        <h1 id="top">На этой странице представлена работа с файлами разного типа</h1>
+    </header>
+    <fieldset class="center">
+        <legend>Теги видеоплеера</legend>
+        <h3 class="sample">&lt;video></h3>
+        <ul>
+            <li>Элемент <code>&lt;video></code> обладает большим набором атрибутов позволяющих управлять воспроизведением ролика.</li>
+            <li>Элемент <code>&lt;poster></code> создаёт превью на видео, до того как оно начнёт вопсроизведение.</li>
+            <li>Атрибут <code>src</code> позволяет указать место положение нужного файла.</li>
+            <li>Атрибуты <code>width</code> и <code>height</code> определяют размеры окна проигрывателя.</li>
+            <li>Атрибут <code>controls</code> нужен чтобы бразуер предоставил собственные элементы воспроизведения.</li>
+            <li>Атрибут <code>autoplay</code> нужен чтобы виоролик сам включился после загрузки воспроизведение видеоролика.</li>
+            <li>Атрибут <code>loop</code> используеться чтобы зациклить воспроизведение видеоролика.</li>
+        </ul>
+        <h3 class="sample">preload</h3>
+        <p>
+            Атрибут <code>preload</code> даёт инструкцию браузеру, что нужно делать при загрузки страницы. У него может быть одно из следующих значений:
+            <ol>
+                <li><code>none</code> - брузер не должен начинать загрузку ролика, пока на него не щёлкнули.</li>
+                <li><code>auto</code> - браузер должен загружать видеоролик, по окончанию загрузки страницы.</li>
+                <li><code>metadata</code> - бразуер должен просто собрать метаинформацию(размер, первый кадр, список воспроизведения и длительность)</li>
+            </ol>
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <p>
+                Пример того, как должен выглядеть код: <code class="cood">&lt;video src="video/存剤 ／ TOOBOCCHI.mp4" width="400" height="280" poster="images/bocchi the rock.jpg" controls></code>
+            </p>
+            <video src="video/存剤 ／ TOOBOCCHI.mp4" width="400" height="280" poster="images/bocchi the rock.jpg" controls></video>
+        </div>
+    </fieldset>
+    <fieldset id="pseud-cen">
+        <legend>Добавление аудиоконтента</legend>
+        <h3 class="sample">&lt;audio></h3>
+        <p>
+            В <u>HTML5</u> присутсвует элемент <code>&lt;audio></code> он создан чтобы добавлять на старницу элементы аудио файлов. <br>
+            Для этого элемента существует несколько атрибутов.
+        </p>
+        <p>
+            Атрибуты элемента <code>&lt;audio></code>:
+            <ul>
+                <li>Атрибут <code>src</code> определяет путь к нужному аудиофайлу.</li>
+                <li>Атрибут <code>controls</code> указывает нужно ли отображать элементы управления прогрывателя. По умолчанию, при его отсутствии элементы отображаться не будут. Но при помощи <i>JavaScript</i> можно настроить отображение собственных элементов управления.</li>
+                <li>Атрибут <code>autoplay</code> указывает, что проигрывание записи должно начинаться атвтоматически.</li>
+                <li>Атрибут <code>preload</code> данный атриубт указывает какие действия должен выполнять браузер, если для проигрывателя не указан атриубт <b>"autoplay".</b></li>
+                <li>Атрибут <code>loop</code> указывает, что аудиофайл должен быть зациклен.</li>
+            </ul>
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <audio src="audio/OST школогайды - Там-там тудудудутутуту.mp3" controls>Мистер Жабка</audio>
+        </div>
+    </fieldset>
+    <footer>
+        <a href="6 Работа с формами.html" class="link">Предыдущая часть</a>
+        <a href="1 Работа с html.html" class="link">На главную</a>
+        <a href="8 CSS.html" class="link">Следующая часть</a>
+    </footer>
+</body>
+</html>
