@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="stato-11" content="Lists, tables and forms">
+    <meta name="project 2.5" content="width=device-width, initial-scale=1.0">
+    <title>Списки, таблицы и формы</title>
+    <link rel="stylesheet" href="style/11 style.css">
+</head>
+<body>
+    <header>
+        <h1 id="top">На этой странице мы будем работать с таблицами и внешним видом различных форм</h1>
+    </header>
+    <fieldset class="center">
+        <legend>Карта страницы</legend>
+        <ul>
+            <li><a href="#Markers">Маркеры</a></li>
+            <li><a href="#Positioning">Позиционирование</a></li>
+            <li><a href="#Table_Properties">Свойства таблицы</a></li>
+            <li><a href="#cell_borders">Границы пустых ячеек</a></li>
+            <li><a href="#Spacing_cells">Интервалы между ячейками</a></li>
+            <li><a href="#Styling_fields">Стилизация полей ввода</a></li>
+            <li><a href="#Styling_Buttons">Стилизация кнопок подтвержения</a></li>
+            <li><a href="#Fieldset_legend">Элементы Fieldset и legend</a></li>
+            <li><a href="#Mouse_styles">Стилизация мыши</a></li>
+        </ul>
+    </fieldset>
+    <fieldset class="right">
+        <legend id="Markers ">Маркеры</legend>
+        <p>
+            Свойство <code>list-style-type</code> позволяет выбрать форму или стиль маркера. Данное свойство может применяться в правилах, применяемых к элементам <code>ol</code>, <code>ul</code> и <code>li</code>
+        </p>
+        <p class="para">Неупорядоченные списки</p>
+        <p>Для неупорядоченных списков можно использовать следующие значения:</p>
+        <ul>
+            <li id="u1">none</li>
+            <li id="u2">disc</li>
+            <li id="u3">circle</li>
+            <li id="u4">square</li>
+        </ul>
+        <p class="para">Упорядоченные списки</p>
+        <p>Для упорядоченных списков можно использовать следующие значения:</p>
+        <code>decimal:</code>
+        <ol id="o1">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+        </ol>
+        <code>decimal-leading-zero:</code>
+        <ol id="o2">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+        </ol>
+        <code>lower-alpha:</code>
+        <ol id="o3">
+            <li>X</li>
+            <li>Y</li>
+            <li>G</li>
+        </ol>
+        <code>upper-alpha:</code>
+        <ol id="o4">
+            <li>X</li>
+            <li>Y</li>
+            <li>G</li>
+        </ol>
+        <code>lower-roman:</code>
+        <ol id="o5">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+        </ol>
+        <code>upper-roman:</code>
+        <ol id="o6">
+            <li>A</li>
+            <li>B</li>
+            <li>C</li>
+        </ol>
+    </fieldset>
+    <fieldset>
+        <legend>Маркеры изображения</legend>
+        <p>
+            С помощью свойства <code>list-style-image</code> можно указать в качестве маркера изображение. <br>
+            Значение начинается с фрагмента <b>URL</b> за которым следует пара скобок. Внутри скобок, в двойных кавычках указывается путь к изображению. <br>
+            Данное свойство может использоваться в правилах применяемых к элементам <code>ul</code> и <code>li</code>
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <h3>Список приведённых произведений</h3>
+            <h4>Антон Павлович Чехов</h4>
+            <ul class="lsi">
+                <li class="l-lsi">Толстый и тонкий</li>
+                <li class="l-lsi">Мертвое тело</li>
+                <li class="l-lsi">Человек в футляре</li>
+                <li class="l-lsi">Егерь</li>
+                <li class="l-lsi">Хамелеон</li>
+            </ul>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend id="Positioning">Позиционирование маркеров</legend>
+        <p>
+            Для списков по умолчанию создаются отступы, а свойство <code>list-style-position</code> указывает должен ли маркер распологаться внутри или снаружи блока, содержащего элементы списка. <br>
+            Данное свойство может принемать одно из двух значений:
+        </p>
+        <ul>
+            <li><code>outside</code> - При этом маркер распологается слева от текстового блока</li>
+            <li><code>inside</code> - Маркер распологается внутри блока с текстом, для которого был создан отступ</li>
+        </ul>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <ul class="out">
+                <li>
+                    Ты считаешь,
+                    Что жизнь - игра?
+                    Как же ты заблуждаешься.
+                </li>
+            </ul>
+            <ul class="ins">
+                <li>
+                    Вчера схоронили
+                    Чью-то совесть...
+                    А может мою?
+                </li>
+            </ul>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend>Стенографическое свойство списков</legend>
+        <p>Также как и в случае с некоторыми другими свойствами <i>CSS</i>, существует стенографическое свойство для оформления списков - <code>lixt-style</code>. Оно позволяет в любом порядке указать слить маркеров, изображение и позиционирование.</p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <h3>Цитаты Говарда Филипса Лавкрафта</h3>
+            <ul class="li-st">
+                <li class="li-stL">Страх — самое древнее и сильное из человеческих чувств, а самый древний и самый сильный страх — страх неведомого.</li>
+                <li class="li-stL">Вы можете ко всему относиться скептически, но ведь для того, чтобы поверить в существование зла, вовсе не обязательно сталкиваться лицом к лицу с его непосредственным воплощением.</li>
+                <li class="li-stL">Невозможно доказать то, во что всë равно не поверят.</li>
+             </ul>
+        </div>
+    </fieldset>
+    <fieldset class="right">
+        <legend id="Table_Properties">Свойства таблицы</legend>
+        <p>Здесь собраны все часто используемыме свойства таблиц:</p>
+        <ol>
+            <li><code>width</code> - устанавливает ширину таблицы</li>
+            <li><code>padding</code> - определяет расстояние между границей каждой ячейки и её содержимым</li>
+            <li><code>text-transform</code> - используется для переключения регистра заголовков таблицы на верхний</li>
+            <li><code>letter-spacing, font-size</code> - добавляет дополнительные стили к заголовкам таблицы</li>
+            <li><code>border-top, border-bottom</code> - добавляет границы над и под заголовками таблицы</li>
+            <li><code>text-align</code> - выравнивает тект по левому и правому краю</li>
+            <li><code>bacground-color</code> - заменяет фоновый цвет чередующихся строк таблицы</li>
+            <li><code>:hover</code> - выделяет строку таблицы при наведении на неё указателя мыши</li>
+        </ol>
+        <p>Ниже приведы советы, которые позволяют улучшить восприятие таблиц:</p>
+        <p class="para">Создавайте отступы в ячейках</p>
+        <p>Если текст в яейках таблиц касается границ(или другой ячейки), то таблицу сложнее воспринемать. Добавление отступа увеличивает удобочитаемость</p>
+        <p class="para">Выделяйте загаловки</p>
+        <p>Выделение заголовков полужирным начертанием шрифта(стиль по умолчанию для элементов <code>th</code>) улучшает читабельность. Вы также можете использовать верхний регистр, для текста заголовков и добавить фоновый цвет или подчёркивание</p>
+        <p class="para">Оттеняйте чередующие строки</p>
+        <p>Назначение оттенка каждой второй строке способно помочь пользователям, следовать по строкам. Используйте небольшое отличие от обычного цвета строк талицы, чтобы она выглядела опрятно</p>
+        <p class="para">Выравнивание номера</p>
+        <p>Можно использовать свойство <b>text-align</b>, чтобы выровнять содержимое каждого столбца, содержащего номера, по правому краю так, чтобы крупные цифры отличались от юолее мелких</p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <div class="Bbod">
+                <h2>Книжный аукцион</h2>
+                <table class="ta1">
+                    <tr>
+                        <th class="t1">Автор</th>
+                        <th class="t1">Название</th>
+                        <th class="money">Зарезервированная цена</th>
+                        <th class="money">Текущая ставка</th>
+                    </tr>
+                    <tr class="mo2">
+                        <td class="t2">Говард Филипс Лавкрафт</td>
+                        <td class="t2">Тень над Инстмутом</td>
+                        <td class="money">15 000 рублей</td>
+                        <td class="money">18 000 рублей</td>
+                    </tr>
+                    <tr class="mo1">
+                        <td class="t2">Чак Паланик</td>
+                        <td class="t2">Обожженные языки</td>
+                        <td class="money"></td>
+                        <td class="money">9 500 рублей</td>
+                    </tr>
+                    <tr class="mo2">
+                        <td class="t2">Джордж Оруэлл</td>
+                        <td class="t2">Скотный двор</td>
+                        <td class="money">12 000 рублей</td>
+                        <td class="money">20 000 рублей</td>
+                    </tr>
+                    <tr class="mo1">
+                        <td class="t2">Катсуширо Атомэ</td>
+                        <td class="t2">Акира</td>
+                        <td class="money">17 500 he,ktq</td>
+                        <td class="money">19 000 рублей</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend id="cell_borders">Границы пустых ячеек</legend>
+        <p>
+            Если в таблице есть пустые ячейки, то можно использовать свойство <code>empty-cells</code>, чтобы указать, следует ли отображатьих границы. <br>
+            Поскольку браузеры по разному обращаются с пустыми ячейками, если нужно явно указать, что границы должны быть показаны или скрыты, то следует использовать данное свойство. Оно можетпринемать одно из трёх значений:
+        </p>
+        <ol>
+            <li><code>show</code> - при использовании этого значения, границы пустых ячеек отображаются</li>
+            <li><code>hide</code> - при использовании этого значения, границы пустых ячеек скрываются</li>
+            <li><code>inherit</code> - если одно граница вложена в другую, то данно езначение приводит к тому, что к ячейкам вложенной таблицы применяются правила содержащей их таблицы</li>
+        </ol>
+        <p>В примере видно, что границы пустой ячейки в первой таблице отображаются а во второй - нет.</p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <div>
+                <table class="OneShot">
+                    <tr>
+                        <td class="t3">1</td>
+                        <td class="t3">2</td>
+                    </tr>
+                    <tr>
+                        <td class="t3">3</td>
+                        <td class="t3"></td>
+                    </tr>
+                </table>
+                <p></p>
+                <table class="TwoShot">
+                    <tr>
+                        <td class="t3">1</td>
+                        <td class="t3">2</td>
+                    </tr>
+                    <tr>
+                        <td class="t3">3</td>
+                        <td class="t3"></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend id="Spacing_cells">Интервалы между ячейками</legend>
+        <p>
+            Свойство <code>border-spacing</code> позволяет настраивать расстояние между соседними ячейками. По умолчанию браузеры обычно оставляют небольшой интервал между ячейками таблицы, и, чтобы увеличить или уменьшить его, вы можете использовать свойство, <code>border-spacing</code>. <br>
+            Значение этого свйоства обычно задаётся в пикселях. Можно указать 2 значения, если нужно отдельно настроить Горизонтальные и Вертикальные интервалы. <br>
+            Если для ячеек таблицы задана граница, то в местах соприкосновения линия будет в два раза толще, чем по краям таблицы. Чтобы предотвратить это, следует испольщовать свойство <code>border-collapse</code> у него может быть 2 значения:
+        </p>
+        <ol>
+            <li><codeb>collapse</codeb> - При использовании данного значения границы сливаются в одну</li>
+            <li><code>separate</code> - Границы отделятся друг от друга</li>
+        </ol>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <div>
+                <table class="ThreeShot">
+                    <tr>
+                        <td class="t4">1</td>
+                        <td class="t4">2</td>
+                    </tr>
+                    <tr>
+                        <td class="t4">3</td>
+                        <td class="t4">4</td>
+                    </tr>
+                </table>
+                <p></p>
+                <table class="FourShot">
+                    <tr>
+                        <td class="t4">1</td>
+                        <td class="t4">2</td>
+                    </tr>
+                    <tr>
+                        <td class="t4">3</td>
+                        <td class="t4">4</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset class="right">
+        <legend id="Styling_fields">Стилизация полей ввода</legend>
+        <p>Здесь будут перечислены частоиспользуемые свойства применяемые к полям ввода</p>
+        <ol>
+            <li><code>font-size</code> - определяет размер текста введённого пользователем</li>
+            <li><code>color</code> - задаёт текст текста</li>
+            <li><code>background-color</code> - определяет цвет фона для введёного текста</li>
+            <li><code>border</code> - добавляет границы вокруг поля ввода</li>
+            <li><code>border-radius</code> - может испольщоваться для создания закруглённых углов</li>
+            <li><code>:focus</code> - используется для изменения цвета фона выделенного текста</li>
+            <li><code>background-image</code> - добавляет в поле фоновое изображение</li>
+        </ol>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <form action="" method="get">
+                <p>
+                    Введите текст:
+                    <input type="text" name="username" size="20" maxlength="30" class="inp">
+                </p>
+            </form>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend id="Styling_Buttons">Стилизация кнопок подтверждения</legend>
+        <p>Здесь будут приведены свойства, которые можно использовать для применения стилей к кнопкам подтверждения</p>
+        <ol>
+            <li><code>color</code> - используется для изменения цвета текста на кнопке</li>
+            <li><code>text-shadow</code> - придаёт трёхмерный вид тексту в браузераах, которые поддерживают данное свойство</li>
+            <li><code>border-bottom</code> - увеличивает толщину нижней границы кнопки, что создаёт трёхмерный эффект</li>
+            <li><code>background-color</code> -позволяет выделить кнопку среди остальных элементов</li>
+            <li><code>:hover</code> - использован для изменения внешнего вида кнопки, при наведении на неё указателя мыши</li>
+        </ol>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <form action="" method="post">
+                <p>Тест кнопки
+                    <input type="submit" name="button" value="Нажми на кнопку" class="but1">
+                </p>
+            </form>
+        </div>
+    </fieldset>
+    <fieldset >
+        <legend id="Fieldset_legend">Стилизация элементов Fieldset и legend</legend>
+        <p>
+            Элемент fieldset особенно полезен при определении границ формы. В случае с длинной формой, с помощью него можно группировать связанные данные. <br>
+            Элемент legend используется для добавления группе элементов информации. <br>
+            Обычно с этими двумя элементами использутся следующие свойства:
+        </p>
+        <ol>
+            <li><code>width</code> - используется для настройки ширины полей</li>
+            <li><code>color</code> - используется для изменения цвета текста</li>
+            <li><code>background-color</code> - используется для изменения цвета позади элемента</li>
+            <li><code>border</code> - используется для настройки внешнего вида границы вокруг группы элементов и/или надписи</li>
+            <li><code>border-radius</code> - используется для создания закруглённых углов в браузерах, которые это поддерживают</li>
+            <li><code>padding</code> - может использоваться для добавления пространства внутри элементов</li>
+        </ol>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <div>
+                <fieldset class="fie">
+                    <legend class="lega">Пример работы элементов</legend>
+                    <p>
+                        <input type="text" name="login" placeholder="Логин" size="25" maxlength="30" class="inp2">
+                        <input type="password" name="password" placeholder="Пороль" size="25" maxlength="30" class="inp2">
+                    </p>
+                </fieldset>
+            </div>
+        </div>
+    </fieldset>
+    <fieldset class="right">
+        <legend id="Mouse_styles">Стили указателей мыши</legend>
+        <p>
+            Свойство <code>cursor</code> позволяет выбрать вид указателя мыши, который должен быть отображён для пользователя. <br>
+            Например можно сделать так, чтобы при наведении на какой-либо элемент указатель мыши принемал форму ладони. <br>
+            Ниже приведены наиболее часто используемые значения для данного свойства:
+        </p>
+        <ul>
+            <li><a href="#" id="a1">auto</a></li>
+            <li><a href="#" id="a2">crosshair</a></li>
+            <li><a href="#" id="a3">default</a></li>
+            <li><a href="#" id="a4">pointer</a></li>
+            <li><a href="#" id="a5">move</a></li>
+            <li><a href="#" id="a6">text</a></li>
+            <li><a href="#" id="a7">wait</a></li>
+            <li><a href="#" id="a8">help</a></li>
+            <li><a href="#" id="a9">cursor: url</a></li>
+        </ul>
+    </fieldset>
+    <p><a href="#top"><img src="images/кнопка_наверх.png" alt="" class="button_top"></a></p>
+    <p><a href="Сайт с хорошей таблицей.html" id="subscription">Пример хорошей таблицы</a></p>
+    <footer>
+        <a href="10 Блоки.html" class="link">Предыдущая часть</a>
+        <a href="1 Работа с html.html" class="link">На главную</a>
+        <a href="12 Позиционирование элементов.html" class="link">Следующая часть</a>
+    </footer>
+</body>
+</html>
