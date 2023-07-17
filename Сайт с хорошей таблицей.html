@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="stato-11.5" content="Site with a good table">
+    <meta name="project 2.5" content="width=device-width, initial-scale=1.0">
+    <title>Сайт с таблицей</title>
+    <link rel="stylesheet" href="../Progect 2.5/style/Дополнительные страницы/Site with a table.css">
+</head>
+<body>
+    <h1>Великие произведения</h1>
+    <p>Планируется торжественное собрание и награждение для автторов, которые внесли особый вклад в развитие литиратуры</p>
+    <p>Вход на следующие мероприятия, происходит по приглашениям:</p>
+    <ul>
+        <li>Книжный марафон</li>
+        <li>Словесный праздник</li>
+        <li>Литературный фестиваль</li>
+    </ul>
+    <table>
+        <tr class="head">
+            <th></th>
+            <th>Никольск-Уссурийск</th>
+            <th>Кристальный Град</th>
+            <th>Звездный Лес</th>
+        </tr>
+        <tr>
+            <th>Книжный марафон</th>
+            <td>23.09.2023 <br>с 15:20 до 18:40</td>
+            <td>12.11.2023 <br>с 09:00 до 12:15</td>
+            <td>17.07.2023 <br>с 14:30 до 17:55.</td>
+        </tr>
+        <tr>
+            <th>Словесный праздник</th>
+            <td>29.03.2023 <br>с 13:45 до 16:10.</td>
+            <td>05.12.2023 <br>с 10:00 до 13:20.</td>
+            <td>18.06.2023 <br>с 19:30 до 22:00.</td>
+        </tr>
+        <tr>
+            <th>Литературный фестиваль</th>
+            <td>09.02.2023 <br>с 08:15 до 11:30.</td>
+            <td>21.11.2023 <br>с 16:00 до 19:25.</td>
+            <td>03.09.2023 <br>с 12:45 до 15:10.</td>
+        </tr>
+        <tr>
+            <th>Лучшие работы XXI века</th>
+            <td>07.05.2023 <br>с 09:30 до 12:50.</td>
+            <td>14.12.2023 <br>с 17:15 до 20:30.</td>
+            <td>26.09.2023 <br>с 14:00 до 17:20.</td>
+        </tr>
+    </table>
+    <form action="1 Работа с html.html" method="get">
+        <fieldset>
+            <legend>Зарегестрируйтесь</legend>
+            <p>
+                <label for="name" class="title">Ваше имя:</label>
+                <input type="text" name="name" id="name"><br>
+                <label for="email" class="title">Ваш email:</label>
+                <input type="text" name="email" id="email">
+            </p>
+            <p>
+                <label for="location" class="title">Ближайший центр:</label>
+                <select name="location" id="location">
+                    <option value="ny">Никольск-Уссурийск</option>
+                    <option value="il">Кристальный Град</option>
+                    <option value="ca">Звездный Лес</option>
+                </select>
+            </p>
+            <span class="titile">Являетесь участником</span>
+            <label for=""><input type="radio" name="member" value="yes">Да</label>
+            <label for=""><input type="radio" name="member" value="no">Нет</label>
+        </fieldset>
+        <div class="submit"><input type="submit" value="Регистрация"></div>
+        <p>
+            <a href="11 Списки, таблицы и формы.html">Вернуться на прошулую страницу</a>
+        </p>
+    </form>
+</body>
+</html>
