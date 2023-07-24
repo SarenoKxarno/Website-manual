@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="stato-14" content="Layout">
+    <meta name="project 2.5" content="width=device-width, initial-scale=1.0">
+    <title>Макет</title>
+    <link rel="stylesheet" href="style/14 style.css">
+</head>
+<body>
+    <header>
+        <h1 id="top">На этой странице представлена работа с макетами</h1>
+    </header>
+    <fieldset class="center">
+        <legend>Карта страницы</legend>
+        <ul>
+            <li><a href="#Titles">Заголовки</a></li>
+            <li><a href="#Navigation">Навигация</a></li>
+            <li><a href="#Articles">Статьи</a></li>
+            <li><a href="#Storonniy">Сторонний контен</a></li>
+            <li><a href="#section">Разделы</a></li>
+            <li><a href="#Header">Группы заголовков</a></li>
+            <li><a href="#design">Рисунки</a></li>
+            <li><a href="#Division">Элементы деления</a></li>
+        </ul>
+    </fieldset>
+    <fieldset class="right">
+        <legend id="Titles">Заголовки и нижние колонтитулы</legend>
+        <p>
+            Элементы: <code>&lt;header></code> и <code>&lt;footer></code> могут использоваться в качестве:
+            <ul>
+                <li>Основного заголовка или нижнего колонтитула, которые располагаются в верхней или нижней части каждой страницы.</li>
+                <li>Заголовка или нижнего колонтитула отдельного элемента <code>article</code> или <code>section</code> на странице.</li>
+            </ul>
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <code>
+                <pre class="cood">
+                &lt;header&gt;
+                    &lt;h5>Закусочная Боба&lt;/h5&gt;
+                &lt;/header&gt;
+                &lt;p>Закусочная Боба - место, где вы можете насладиться вкусной и сытной едой по доступным ценам.&lt;/p&gt;
+                &lt;footer&gt;
+                    &copy;2023 "Закусочная Боба"&gt;
+                &lt;/footer&gt;
+                </pre>
+            </code>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend id="Navigation">Меню навигации</legend>
+        <p>
+            В элемент <code>&lt;nav></code> вставляется основное меню навигации сайта
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <code>
+                <pre class="cood">
+                &lt;header&gt; 
+                    &lt;h5>Закусочная Боба&lt;/h5&gt;
+                &lt;/header&gt;
+                &lt;p>Закусочная Боба - место, где вы можете насладиться вкусной и сытной едой по доступным ценам.&lt;/p&gt;
+                    &lt;nav&gt;
+                        &lt;ul&gt;
+                            &lt;li>О нас&lt;/li&gt;
+                            &lt;li>Меню&lt;/li&gt;
+                            &lt;li>Отзывы&lt;/li&gt;
+                            &lt;li>Контакты&lt;/li&gt;
+                        &lt;/ul>
+                    &lt;/nav>
+                &lt;footer&gt;
+                    &copy; 2023 "Закусочная Боба"&gt;
+                &lt;/footer&gt;
+                </pre>
+            </code>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend id="Articles">Статьи</legend>
+        <p>
+            Элемент <code>&lt;article></code> используется для любого независимого раздела страницы. <br>
+            Это может быть отдельная статья или запись в блоге, комментарий или сообщение на форуме, а также любая другая самостоятельная часть контента. <br>
+            Если страница срдержит несколько статей, то каждая отдельная статья будет помещена в собственный элемент <code>&lt;article></code>. <br>
+            Элементы <code>&lt;article></code> бывают вложены друг в друга. Например сообщение в блоге может находиться в одном элементе <code>&lt;article></code> а каждый коментарий к сообщению - в отдельном дочернем элементе <code>&lt;article></code>.
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <code>
+                <pre class="cood">
+                    &lt;article>
+                        &lt;figure>
+                            &lt;img src="images/бургеры.png" alt="Помещение закусочной">
+                            &lt;figcaption>Закусочная&lt;/figcaption>
+                        &lt;/figure>
+                        &lt;hgroup>
+                            &lt;h2>Сочные бургеры&lt;/h2>
+                            &lt;h3>Еда быстрого приготовления&lt;/h3>
+                        &lt;/hgroup>
+                        &lt;p>
+                            Свежие, приготовленные по лучшему рецепту, бургеры. Готовятся провессионалами для любителей вкусно и быстро поесть 
+                        &lt;/p>
+                    &lt;/article>
+                </pre>
+            </code>
+        </div>
+    </fieldset>
+    <fieldset class="right">
+        <legend id="Storonniy">Сторонний контент</legend>
+        <p>
+            Элемент <code>&lt;aside></code> имеет две цели, в зависимости от того, находится ли он внутри элемента <code>&lt;article></code> или нет.
+            <p>
+                &#9672;Когда элемент <code>&lt;aside></code> расположен внутри элемента <code>&lt;article></code> он должен содержать информацию, относящуюся к статье, но не обязательно к её общему смыслу. <br>
+                Например врезка с цитатой или глоссарий может выступать в качестве стороннего содержимого для статьи, к которой они относятся. 
+            </p>
+            <p>
+                &#9672;Когда элемент <code>&lt;aside></code> расположен за пределами элемента <code>&lt;article></code> он выступает в качестве контейнера для контента, относящегося ко всей странице. <br>
+                Например он может содержать ссылки на другие разделы сайта, списко последних сообщений, строку поиска или последние твиты, добавленные автором.
+            </p>
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <code>
+                <pre class="cood">
+                    &lt;aside>
+                        &lt;section>
+                            &lt;h2>Популярные заказы&lt;/h2>
+                            &lt;a href="">Гамбургер&lt;/a>
+                            &lt;a href="">Шаурма&lt;/a>
+                            &lt;a href="">Бутерброды с тунцом&lt;/a>
+                            &lt;a href="">Картофель фри&lt;/a>
+                        &lt;/section>
+                        &lt;section>
+                            &lt;h3>Адрес&lt;/h3>
+                            &lt;p>
+                                Закусочная Боба&lt;br>
+                                Омск&lt;br>
+                                улица Ленина, дом 25
+                            &lt;/p> 
+                        &lt;/section>
+                    &lt;/aside>
+                </pre>
+            </code>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend id="section">Разделы</legend>
+        <p>
+            Элемент <code>&lt;section></code> группирует связанный контент и обычно каждый раздел имеет собственный заголовок. <br>
+            Например на главной старнице может быть несколько элементов <code>&lt;section></code> содержащих такие разделы страниц, как последние новости, самые популярные товары и подписка на рассылку. <br>
+            Поскольку элемент <code>&lt;section></code> группирует связанный контент, он может содержать несколько различных элементов <code>&lt;article></code> объединённых общей темой или целью <br>
+            Если страница содержит длинную статью, то элемент <code>&lt;section></code> можно использовать для разбивки статьи на отдельные разделы. <br>
+            Элемент <code>&lt;section></code> не следует использовать в качестве оболочки для всей страницы. <br>
+            Если необходимо использовать большой контейнер, то для решения этой задачи лучше всего будет использовать <code>&lt;div></code>
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <code>
+                <pre>
+                &lt;section>
+                    &lt;h2>Популярные заказы&lt;/h2>
+                    &lt;a href="">Гамбургер&lt;/a>
+                    &lt;a href="">Шаурма&lt;/a>
+                    &lt;a href="">Бутерброды с тунцом&lt;/a>
+                    &lt;a href="">Картофель фри&lt;/a>
+                &lt;/section>
+                &lt;section>
+                    &lt;h3>Адрес&lt;/h3>
+                    &lt;p>
+                        Закусочная Боба&lt;br>
+                        Омск&lt;br>
+                        улица Ленина, дом 25
+                    &lt;/p> 
+                &lt;/section>
+                </pre>
+            </code>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend id="Header">Группы заголовков</legend>
+        <p>
+            Элемент <code>&lt;hgroup></code> предназначен для группировки элементов <code>&lt;h1></code>-<code>&lt;h6></code> чтобы они рассматривались как один заголовок. <br>
+            Например элемент <code>&lt;hgroup></code> может содержать заголовок внутри элемента <code>&lt;h2></code> и подзаголовок внутри <code>&lt;h3></code> <br>
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <code>
+                <pre class="cood">
+                    &lt;hgroup>
+                        &lt;h2>Особые горячие блюда&lt;/h2>
+                        &lt;h3>Только по самым лучшим ценам&lt;/h3>
+                    &lt;/hgroup>
+                </pre>
+            </code>
+        </div>
+    </fieldset>
+    <fieldset class="right">
+        <legend id="design">Рисунки</legend>
+        <p>
+            Элемент <code>&lt;figure></code> может содержать контент, отосящийся к содержимому статьи. <br>
+            Важно отметить что статься по-прежнему должна иметь смысл в случае перемещения содержмого элемента <code>&lt;figure></code> в другую часть страницы или вообще на другую страницу. <br>
+            По этой причине данный элемент стоит использовать только тогда, когда контент просто ссылкается на элемент, а не тогда когда он является неотёмлимой частью содержимого страницы. <br>
+            Примеры использования включают:
+            <ol>
+                <li>Изображения</li>
+                <li>Видео</li>
+                <li>Графики</li>
+                <li>Диограммы</li>
+                <li>Образцы кода</li>
+                <li>Текст, который потдерживает основной смысл статьи</li>
+            </ol>
+            Элемент <code>&lt;figure></code> также должен содержать элемент <code>&lt;figcaption></code> обеспечивающий описание для его контента.
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <code>
+                <pre class="cood">
+                    &lt;figure>
+                        &lt;img src="images/шаверма.png" alt="шавуха">
+                        &lt;figcaption>Сочная шаверма&lt;/figcaption>
+                    &lt;/figure>
+                </pre>
+            </code>
+        </div>
+    </fieldset>
+    <fieldset>
+        <legend id="Division">Элементы деления</legend>
+        <p>
+            Элемент <code>&lt;div></code> остаётся важным способом группировки связанного контента, поскольку новые элементы можно использовать только для тех целей, для которых они предназначены. <br>
+            Когда для группировки контента нет подходящего элемента, можно использовать <code>&lt;div></code>
+        </p>
+        <p class="primo">Пример работы:</p>
+        <div class="example">
+            <code>
+                <pre class="cood">
+                    &lt;div>
+                        &lt;header>
+                            &lt;h1>Закусочная Боба&lt;/h1>
+                            &lt;nav>
+                                &lt;!-- nav контент навигации--&gt;
+                            &lt;/nav>
+                        &lt;/header>
+                        &lt;section>
+                            &lt;!-- section контент раздела--&gt;
+                        &lt;/section>
+                        &lt;aside>
+                            &lt;!-- aside сторонний контент--&gt;
+                        &lt;/aside>
+                        &lt;footer>
+                            &lt;!-- footer подвал страницы--&gt;
+                        &lt;/footer>
+                    &lt;/div>
+                </pre>
+            </code>
+        </div>
+    </fieldset>
+    <p><a href="#top"><img src="images/кнопка_наверх.png" alt="" class="button_top"></a></p>
+    <footer>
+        <a href="13 Изображения.html" class="link">Предыдущая часть</a>
+        <a href="1 Работа с html.html" class="link">На главную</a>
+    </footer>
+</body>
+</html>
